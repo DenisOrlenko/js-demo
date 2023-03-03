@@ -20,21 +20,60 @@
 
 // const userAnswer = prompt('What is the official name of JavaScript?');
 
-// console.log(userAnswer);
-
 // if (userAnswer.toLowerCase() === 'ECMAScript'.toLowerCase()) {
 //   alert('Yep!');
 // } else {
 //   alert("Don't you know? ECMAScript!");
 // }
 
+let countryQuestion = 'Where do you live?';
+const countryUserAnswer = prompt(countryQuestion);
+
+if (countryUserAnswer.toLowerCase() === 'Ukraine'.toLowerCase()) {
+  alert('you are right');
+} else {
+  // alert('you are wrong');
+}
+// Напиши скрипт для відображення годин та хвилин у консолі
+// браузера у вигляді рядка формату "14 год. 26 хв.".
+// Якщо значення змінної minutes дорівнює 0,
+// то виводь рядок "14 год.", без хвилин.
+
 ///////////////////////////////////////////////
 
 // Напиши скрипт для відображення годин та хвилин у консолі браузера у вигляді рядка формату "14 год. 26 хв.". Якщо значення змінної minutes дорівнює 0, то виводь рядок "14 год.", без хвилин.
 
-// const hours = 14;
-// const minutes = 0;
+const hours = 14;
+const minutes = 10;
+// 1 способ
+//
 // let timestring;
+
+// if (minutes === 0) {
+//   timestring = `${hours} hours`;
+// } else {
+//   timestring = `${hours} hours ${minutes} minutes`;
+// }
+// console.log('timestring:', timestring)
+
+// 2 способ - Делаю рефакторинг кода
+//
+let timestring = `${hours} hours`;
+
+if (minutes > 0) {
+  // timestring = timestring + ` ${minutes} minutes`;
+  timestring += ` ${minutes} minutes`;
+
+}
+console.log('3) задача - timestring:', timestring)
+console.log('')
+console.log('4) typeof - определение типа данных переменной - typeof timestring:', typeof timestring)
+
+
+
+
+
+
 
 // if (minutes === 0) {
 //   timestring = `${hours} год.`;
@@ -101,14 +140,18 @@
 // Якщо ні, додай до кінця значення link цей символ.
 // Використовуй конструкцію if...else.
 
-// let link = 'https://my-site.com/about';
+let link = 'https://my-site.com/about';
 
-// if (!link.endsWith('/')) {
-//   link += '/';
-// }
+if (!link.endsWith('/')) {
+  link += '/';
+}
 
-// console.log(link);
+console.log(link);
+console.log('')
 
+console.log('5) Метод endsWith("/") => проверяет на совпадение последнего символ - возвращает БУЛЬ', link.endsWith('/'));
+console.log('Метод startsWith("https") => проверяет на совпадение первого символ - возвращает БУЛЬ', link.startsWith('https'));
+console.log('')
 ///////////////////////////////////////////////////
 
 // Напиши скрипт який перевіряє чи закінчується значення змінної link символом /.
@@ -117,11 +160,15 @@
 
 // let link = 'https://my-site.com/about';
 
-// if (!link.endsWith('/') && link.includes('my-site')) {
-//   link += '/';
-// }
+if (!link.endsWith('/') && link.includes('my-site')) {
+  link += '/';
+}
 
-// console.log(link);
+console.log('6) Метод .includes("http") - проверяет содержтся ли в строке указанная подстрока, подстрочные символы("http")', link.includes('http'));
+console.log('link:', link)
+console.log('link.includes("http"):' ,link.includes('my-site'))
+
+console.log('');
 
 ///////////////////////////////////////////////////
 
